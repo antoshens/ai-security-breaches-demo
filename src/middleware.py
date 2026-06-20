@@ -13,7 +13,7 @@ def secure_output_middleware(agent_response: str) -> str:
     results = analyzer.analyze(text=agent_response, language="en")
     
     # 2. Anonimyzing
-    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results)
+    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results) # type: ignore
     return anonymized_text.text
 
 
@@ -36,7 +36,7 @@ def custom_secure_output_middleware(agent_response: str) -> str:
 
     results = analyzer.analyze(text=agent_response, language="en")
     
-    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results)
+    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results) # type: ignore
     return anonymized_text.text
 
 
@@ -73,7 +73,7 @@ def custom_secure_output_middleware_with_mask(agent_response: str) -> str:
 
     results = analyzer.analyze(text=agent_response, language="en")
     
-    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results, operators=operators_custom)
+    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results, operators=operators_custom) # type: ignore
     return anonymized_text.text
 
 def custom_secure_output_middleware_multiple_lang(agent_response: str) -> str:
@@ -96,5 +96,5 @@ def custom_secure_output_middleware_multiple_lang(agent_response: str) -> str:
     # 3. Now we can dynamically switch context during analysis:
     results = multi_lang_analyzer.analyze(text=agent_response, language="uk")
 
-    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results)
+    anonymized_text = anonymizer.anonymize(text=agent_response, analyzer_results=results) # type: ignore
     return anonymized_text.text

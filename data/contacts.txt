@@ -1,2 +1,0 @@
-ID: DK-123 | Employee: Anton Honcharenko | Email: anton.h@draftkings.com | Card: 5127 8809 9999 9990
-ID: DK-4567009 | Employee: Monica Lee | Email: monica.l@company.com | Card: 6703 4444 4444 4449

@@ -1,0 +1,16 @@
+{
+    "employees": [
+        {
+            "id": "DK-123",
+            "full_name": "Anton Honcharenko",
+            "email": "anton.h@draftkings.com",
+            "card": "5127 8809 9999 9990"
+        },
+        {
+            "id": "DK-4567009",
+            "full_name": "Monica Lee",
+            "email": "monica.l@company.com",
+            "card": "6703 4444 4444 4449"
+        }
+    ]
+}

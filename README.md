@@ -26,7 +26,7 @@ Because instructions and untrusted data are blended into the same mathematical a
 
 While direct jailbreaks (chat-based attacks) are well-known, **Indirect Prompt Injection** presents a much greater risk for production agents. The attack vector unfolds as follows:
 * An agent is tasked with processing a corporate asset (e.g., analyzing an invoice image or summarizing an incoming email).
-* An attacker injects hidden instructions (`--- SYSTEM OVERRIDE ---`) into the text or media assets.
+* An attacker injects hidden instructions into the text or media assets.
 * When the agent tokens are parsed by the LLM (such as *Gemma-4*), the model's weights shift attention towards the injected payload, causing it to unauthorizedly execute system tools (e.g., `ReadContactsDB`) and leak confidential PII.
 
 ---
@@ -54,7 +54,7 @@ To mitigate this without sacrificing the agent's autonomy, this project implemen
 ├── data/
 │   ├── invoice.png                          # Example of invoice image
 |   └── poisoned_invoice.jpg                 # Image artifact containing malicious payload
-|   └── contacts.txt                         # Mock target database containing sensitive PII
+|   └── contacts.json                        # Mock target database containing sensitive PII
 │   └── malicious_email.txt.txt              # Text of the malicious email
 ├── requirements.txt                         # Strictly pinned dependency manifest
 └── README.md                                # System architectural manifest
