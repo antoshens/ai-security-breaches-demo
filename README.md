@@ -46,8 +46,10 @@ To mitigate this without sacrificing the agent's autonomy, this project implemen
 
 ```text
 ├── notebooks/
-│   ├── 01_prompt_injection_demo.ipynb       # Email attack & text token smuggling simulation
-│   └── 02_multimodal_vision_robustness.ipynb # Vision analysis via Gemma-4 & alignment analysis
+│   ├── demo_1_email_attack.ipynb            # Email attack & text token smuggling simulation
+│   └── demo_1_image_attack.ipynb            # Vision analysis via Gemma-4 & alignment analysis
+|   └── demo_2_email_shield.ipynb            # Guardrails usage for the email attack
+|   └── demo_2_image_shield.ipynb            # Example of guardrails usage for the vision attack
 ├── src/
 │   └── middleware.py                        # Customized Microsoft Presidio PII Guardrail
 |   └── add_custom_metadata_to_image.py      # Script for adding text to the image (jpg/png files)
